@@ -39,7 +39,13 @@ while going == 1:
     print("\n"*3)
     input_value = input('계속하시려면 y를, 그만하시려면 n을 입력해주세요')
     
-    if input_value == "y":
-        going = 1
-    else:
-        going = 0
+    check = 1
+    while check == 1:
+        if input_value == "y":
+            going = 1
+            check = 0
+        if input_value == "n":
+            going = 0
+            check = 0
+        else:
+            input_value = input('잘못 입력 하셨습니다.\n계속하시려면 y를, 그만하시려면 n을 입력해주세요')
